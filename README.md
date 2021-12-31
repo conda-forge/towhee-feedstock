@@ -130,4 +130,5 @@ Feedstock Maintainers
 =====================
 
 * [@haorenfsa](https://github.com/haorenfsa/)
+* [@chiiizzzy](https://github.com/chiiizzzy/)
 
