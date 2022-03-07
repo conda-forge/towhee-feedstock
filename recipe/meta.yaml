@@ -29,13 +29,13 @@ requirements:
 test:
   imports:
     - towhee
-    - towhee.array
     - towhee.cnn_trainer
     - towhee.cnn_trainer.utils
     - towhee.dag
     - towhee.dag.utils
     - towhee.data_source
     - towhee.dataframe
+    - towhee.dataframe.array
     - towhee.engine
     - towhee.engine.operator_io
     - towhee.engine.operator_runner
