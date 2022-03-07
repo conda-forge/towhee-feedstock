@@ -24,6 +24,7 @@ requirements:
     - requests >=2.12.5
     - tqdm >=4.59.0
     - pytorch >=1.2.0
+    - ruamel.yaml <=0.16.6
 
 test:
   imports:
