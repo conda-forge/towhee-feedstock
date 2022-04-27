@@ -1,20 +1,23 @@
+{% set version = "0.6.0" %}
+
 package:
   name: "towhee"
-  version: "0.6.0"
+  version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/b7/7a/728378f6d58f71c4bf4cea9f06173f193661b9f100de63e06f00066be49d/towhee-0.6.0-py3-none-any.whl
-  sha256: c4cc413e2197eaeb3469fffd689fe7259d00c3ba2eaeeeaf93f52aa583a7b792
+  url: https://github.com/towhee-io/towhee/releases/download/{{ version }}/towhee-{{ version }}.tar.gz
+  sha256: c5bfd1df0f2e4c2efafe5975d40553bac5213628f59daf4a9f6713046bb0b7d2
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install towhee-0.6.0-py3-none-any.whl --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools_scm
   run:
     - python >=3.6
     - pyyaml >=5.3.0
@@ -48,6 +51,7 @@ test:
     - ipython
     - scikit-learn
     - pydeprecate
+    - setuptools_scm
 
 about:
   home: https://github.com/towhee-io/towhee
