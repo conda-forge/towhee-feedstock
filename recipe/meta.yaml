@@ -1,15 +1,15 @@
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
-  name: "towhee"
+  name: towhee
   version: {{ version }}
 
 source:
   url: https://github.com/towhee-io/towhee/releases/download/{{ version }}/towhee-{{ version }}.tar.gz
-  sha256: c5bfd1df0f2e4c2efafe5975d40553bac5213628f59daf4a9f6713046bb0b7d2
+  sha256: 4a7c9ab5396ef54e75ff82a79ed64ca9c13b9f2505d64bf390082f6a4773a8d7
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
