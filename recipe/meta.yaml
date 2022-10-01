@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: towhee
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/towhee-io/towhee/releases/download/{{ version }}/towhee-{{ version }}.tar.gz
-  sha256: d2044d90cfc35c1b8d5233f69424ef1f218c5396f4756b18df1fc0f23e8e50a4
+  sha256: 73f88b54a5cc865e892c4d7137619534bccbe512afa7449e6400810e2879f6c1
 
 build:
   number: 0
