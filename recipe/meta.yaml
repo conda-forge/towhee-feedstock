@@ -30,6 +30,7 @@ requirements:
     - git
     - pygit2
     - pgzip
+    - pyarrow
 
 test:
   commands:
