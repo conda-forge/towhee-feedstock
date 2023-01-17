@@ -1,4 +1,4 @@
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: towhee
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/towhee-io/towhee/releases/download/{{ version }}/towhee-{{ version }}.tar.gz
-  sha256: 73f88b54a5cc865e892c4d7137619534bccbe512afa7449e6400810e2879f6c1
+  sha256: 09ad35c57cc5a8b9ef0ca1b7d212e045129996c8ef045dd98bacc343642f324f
 
 build:
   number: 0
@@ -28,9 +28,10 @@ requirements:
     - tabulate
     - numpy >=1.19.5
     - git
-    - pygit2
+    - pygit2 <=1.10.1
     - pgzip
     - pyarrow
+    - twine
 
 test:
   commands:
