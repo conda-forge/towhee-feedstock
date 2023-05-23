@@ -1,12 +1,13 @@
-{% set version = "0.9.0" %}
+{% set version = "1.0.0rc1" %}
 
 package:
   name: towhee
   version: {{ version }}
 
 source:
-  url: https://github.com/towhee-io/towhee/releases/download/{{ version }}/towhee-{{ version }}.tar.gz
-  sha256: 09ad35c57cc5a8b9ef0ca1b7d212e045129996c8ef045dd98bacc343642f324f
+  url: https://github.com/towhee-io/towhee/releases/download/untagged-0a07b9115923e7113f17/towhee-1.0.0rc1.tar.gz
+  # url: https://github.com/towhee-io/towhee/releases/download/{{ version }}/towhee-{{ version }}.tar.gz
+  sha256: 0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5
 
 build:
   number: 0
@@ -32,6 +33,7 @@ requirements:
     - pgzip
     - pyarrow
     - twine
+    - tenacity
 
 test:
   commands:
@@ -56,6 +58,7 @@ test:
     - scikit-learn
     - pydeprecate
     - setuptools_scm
+    - tenacity
 
 about:
   home: https://github.com/towhee-io/towhee
