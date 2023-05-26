@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: towhee
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/towhee-io/towhee/releases/download/{{ version }}/towhee-{{ version }}.tar.gz
-  sha256: 09ad35c57cc5a8b9ef0ca1b7d212e045129996c8ef045dd98bacc343642f324f
+  sha256: e3b79a797d1e49a290b0f2bb0f3c907fe14324d00ac24f639c0e5d52bf47c46b
 
 build:
   number: 0
@@ -20,17 +20,10 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.6
-    - pyyaml >=5.3.0
     - requests >=2.12.5
     - tqdm >=4.59.0
-    - pytorch >=1.8.0
-    - ruamel.yaml <=0.16.6
     - tabulate
-    - numpy >=1.19.5
-    - git
-    - pygit2 <=1.10.1
-    - pgzip
-    - pyarrow
+    - numpy
     - twine
 
 test:
@@ -41,21 +34,29 @@ test:
     - pytorch >=1.8.0
     - torchvision >=0.9.0
     - numpy >=1.19.5
-    - pandas >=1.1.5
     - requests >=2.12.5
     - tqdm >=4.59.0
+    - torchmetrics ==0.7.0
+    - importlib_metadata
+    - tabulate
+    - pytest
+    - fairscale
+    - python-multipart
+    - transformers>=4.19.2
+    - pandas >=1.1.5
+    - einops >=0.4.1
+    - timm ==0.5.4
+    - PyWavelets
+    - dill
+    - onnx
+    - scikit-learn
     - pillow >=8.3.1
     - scipy >=1.5.3
     - opencv >=4.5.3.56 # rename from opencv-python
-    - torchmetrics >=0.7.0
-    - ruamel.yaml <=0.16.6
-    - matplotlib >=3.0.0
-    - importlib_metadata
-    - tabulate
     - ipython
+    - matplotlib
     - scikit-learn
-    - pydeprecate
-    - setuptools_scm
+    - loguru
 
 about:
   home: https://github.com/towhee-io/towhee
