@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: towhee
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/towhee-io/towhee/releases/download/{{ version }}/towhee-{{ version }}.tar.gz
-  sha256: 86ebc3d3daa4eff343d542f82c66088bddf8e040eea75b25e4130f8d5bebf1ca
+  sha256: d9f191f321de0524d896c68fd341fbf64b0f8e8b08042b05d356ae196b958bc4
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
     - tabulate
     - numpy
     - twine
-    - pydantic
+    - pydantic <2.0
     - tenacity
 
 test:
@@ -59,7 +59,7 @@ test:
     - matplotlib
     - scikit-learn
     - loguru
-    - pydantic
+    - pydantic <2.0
     - tenacity
 
 about:
