@@ -158,4 +158,5 @@ Feedstock Maintainers
 
 * [@chiiizzzy](https://github.com/chiiizzzy/)
 * [@haorenfsa](https://github.com/haorenfsa/)
+* [@junjiejiangjjj](https://github.com/junjiejiangjjj/)
 

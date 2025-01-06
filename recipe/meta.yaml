@@ -9,17 +9,17 @@ source:
   sha256: 8e1151e91108a817c3960d6c0e7eb3d147ebd2184df82a4884ed39fd9d372574
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools_scm
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - requests >=2.12.5
     - tqdm >=4.59.0
     - tabulate
@@ -61,6 +61,7 @@ test:
     - loguru
     - pydantic <2.0
     - tenacity
+    - python {{ python_min }}
 
 about:
   home: https://github.com/towhee-io/towhee
